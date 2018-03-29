@@ -1,11 +1,16 @@
 {
-  "name": "exam-system",
+  "name": "keju",
   "version": "1.0.0",
   "description": "考试、笔试系统",
   "private": true,
   "dependencies": {
     "egg": "^2.2.1",
-    "egg-scripts": "^2.5.0"
+    "egg-mongoose": "^2.2.0",
+    "egg-redis": "^2.0.0",
+    "egg-scripts": "^2.5.0",
+    "egg-validate": "^1.0.0",
+    "egg-view-ejs": "^2.0.0",
+    "fs-extra": "^5.0.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -21,8 +26,8 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-exam-system",
-    "stop": "egg-scripts stop --title=egg-server-exam-system",
+    "start": "egg-scripts start --daemon --title=egg-server-keju",
+    "stop": "egg-scripts stop --title=egg-server-keju",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
@@ -37,17 +42,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coder-cottage/exam-system.git"
+    "url": "git+https://github.com/coder-cottage/keju.git"
   },
   "keywords": [
     "exam",
-    "system",
-    "egg.js"
+    "interviews",
+    "system"
   ],
   "author": "coder",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coder-cottage/exam-system/issues"
+    "url": "https://github.com/coder-cottage/keju/issues"
   },
-  "homepage": "https://github.com/coder-cottage/exam-system#readme"
+  "homepage": "https://github.com/coder-cottage/keju#readme"
 }
