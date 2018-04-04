@@ -5,5 +5,8 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/', controller.home.index);
+
+  router.get('/api/article/list', controller.app.list);
+  router.get('/api/article/:id', controller.app.detail);
+  router.get('/*', controller.app.index);
 };

@@ -1,10 +1,5 @@
 'use strict';
 
-exports.ejs = {
-  enable: true,
-  package: 'egg-view-ejs',
-};
-
 exports.redis = {
   enable: true,
   package: 'egg-redis',
@@ -18,4 +13,9 @@ exports.mongoose = {
 exports.validate = {
   enable: true,
   package: 'egg-validate',
+};
+
+exports.vuessr = {
+  enable: true,
+  package: 'egg-view-vue-ssr'
 };
