@@ -17,6 +17,14 @@ module.exports = appInfo => {
       server: { poolSize: 20 },
     },
   };
+  config.redis = {
+    client: {
+      port: 6379,
+      host: '127.0.0.1',
+      password: null,
+      db: 0,
+    },
+  };
   config.siteFile = {
     '/favicon.ico': fs.readFileSync(path.join(appInfo.baseDir, 'app/web/asset/images/favicon.ico'))
   };
@@ -24,7 +32,6 @@ module.exports = appInfo => {
   config.view = {
     cache: false
   };
-
   config.vuessr = {
     layout: path.join(appInfo.baseDir, 'app/web/view/layout.html'),
     renderOptions: {
@@ -41,6 +48,13 @@ module.exports = appInfo => {
   config.webpack = {
     browser: false,
   };
+
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
+
 
   // 覆盖配置文件
   const extraConfig = path.join(appInfo.root, process.env.config || '.env/extra.json');
