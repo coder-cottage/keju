@@ -7,7 +7,7 @@ exports.ok = (data, msg) => {
   return {
     code: 0,
     data,
-    msg
+    msg,
   };
 };
 

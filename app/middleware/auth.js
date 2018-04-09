@@ -13,6 +13,6 @@ module.exports = () => {
       ctx.body = ctx.helper.error(1, 'not authorize!');
       return;
     }
-    next();
+    await next();
   };
 };

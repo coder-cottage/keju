@@ -27,6 +27,24 @@ class UserService extends Service {
     }
     return result;
   }
+
+  async info(user_id) {
+    const { ctx } = this;
+    const result = await ctx.model.User.findById(user_id, { pass: 0 });
+    return result;
+  }
+
+  async list(where, skip, limit) {
+    const { ctx } = this;
+    const result = await ctx.model.User.aggregate([{ $match: where }, { $sort: { create_at: 1 } }, { $skip: skip }, { $limit: limit }]);
+    return result;
+  }
+
+  async update(user_id, body) {
+    const { ctx } = this;
+    const result = await ctx.model.User.updateOne({ _id: user_id }, body);
+    return result;
+  }
 }
 
 module.exports = UserService;

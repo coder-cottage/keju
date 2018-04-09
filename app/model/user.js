@@ -20,7 +20,6 @@ module.exports = app => {
   });
 
   UserSchema.index({ loginname: 1 }, { unique: true });
-  UserSchema.index({ email: 1 }, { unique: true });
 
   UserSchema.pre('save', function(next) {
     const now = new Date();
